@@ -28,4 +28,4 @@ Branch **main** hanya dipakai ketika:
 
 ## 📦 Cara Clone Repository
 ```sh
-git clone https://github.com/NAMA-PEMBUAT/NAMA-REPO.git
+git clone https://github.com/wldnzki/KelompokPUM.git
