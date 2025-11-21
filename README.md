@@ -1,14 +1,14 @@
 # 💻 Project Kelompok PM — Tugas Git & Kolaborasi
 
-Repository ini digunakan untuk memenuhi tugas praktikum **Pemrograman Mobile / Pemrograman Multimedia (PM)** terkait penggunaan Git dan GitHub dalam kolaborasi tim.
+Repository ini digunakan untuk memenuhi tugas praktikum **Keamanan Sistem Informasi (PM)** terkait penggunaan Git dan GitHub dalam kolaborasi tim.
 
 ---
 
 ## 👥 Anggota Kelompok PM
 1. Wildan Zaki  
-2. (isi nama anggota 2)  
-3. (isi nama anggota 3)  
-4. (isi nama anggota 4)
+2. Ripki Pernando 
+3. Tiara Aprilia  
+4. Nazwa Mutiya
 
 ---
 
