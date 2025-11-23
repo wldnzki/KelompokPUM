@@ -309,6 +309,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
         <h2>Teknologi Informasi</h2>
         <p>Selamat datang di website resmi HMJ TI. Mari berkembang bersama melalui kolaborasi, inovasi, dan pengabdian
             di bidang teknologi informasi.</p>
+        <p>Edit baris kode yang belum pernah ada versi ripki</p>
         <a href="#about" class="btn-primary">Kenal Lebih Dekat</a>
     </div>
 
