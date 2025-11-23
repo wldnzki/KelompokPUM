@@ -305,7 +305,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
 
     <!-- HERO -->
     <div class="hero">
-        <h1> Website Himpunan Mahasiswa Jurusan  </h1>
+        <h1>Himpunan Mahasiswa Jurusan</h1>
         <h2>Teknologi Informasi</h2>
         <p>Selamat datang di website resmi HMJ TI. Mari berkembang bersama melalui kolaborasi, inovasi, dan pengabdian
             di bidang teknologi informasi.</p>
@@ -318,7 +318,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             <h2>Tentang Kami</h2>
             <p>HMJ Teknik Informatika adalah organisasi kemahasiswaan yang menjadi wadah pengembangan potensi,
                 kreativitas, dan kepemimpinan mahasiswa.</p>
-            <p>Kami berkomitmen menciptakan generasi teknologi yang <strong>inovatif</strong>,
+            <p>Kami berkomitmen mencictakan generasi teknologi yang <strong>inovatif</strong>,
                 <strong>kolaboratif</strong>, dan <strong>profesional</strong> dalam menghadapi tantangan era digital.
             </p>
         </div>
