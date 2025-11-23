@@ -304,7 +304,8 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
 <body>
 
     <!-- HERO -->
-    <div class="hero">
+    <div class="hero"> tiara
+        <h1> Website Himpunan Mahasiswa Jurusan</h1>
         <h1>Himpunan Mahasiswa Jurusan</h1>
         <h2>Teknologi Informasi</h2>
         <p>Selamat datang di website resmi HMJ TI. Mari berkembang bersama melalui kolaborasi, inovasi, dan pengabdian
@@ -392,4 +393,3 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
     </script>
 </body>
 
-</html>
