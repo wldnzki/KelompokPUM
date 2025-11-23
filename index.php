@@ -13,7 +13,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMJ TI - Beranda</title>
+    <title>HMJ TEKNOLOGI INFORMASI POLTERA - Nazwa Mutiya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
@@ -305,7 +305,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
 
     <!-- HERO -->
     <div class="hero">
-        <h1> Website Himpunan Mahasiswa Jurusan Politeknik Negeri Lampung </h1>
+        <h1> Website Himpunan Mahasiswa Jurusan  </h1>
         <h2>Teknologi Informasi</h2>
         <p>Selamat datang di website resmi HMJ TI. Mari berkembang bersama melalui kolaborasi, inovasi, dan pengabdian
             di bidang teknologi informasi.</p>
