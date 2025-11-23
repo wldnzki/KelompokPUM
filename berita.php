@@ -12,7 +12,8 @@ if (!$result) {
 <div id="layoutSidenav_content">
     <main>
         <header class="page-header">
-            <h2>Berita Teknologi Informasi</h2>
+            <h2>Berita Teknologi Informasi – Edit oleh Tiara</h2>
+            <p>Tambahan baris oleh Tiara untuk Skema 2.</p>
             <p>Artikel dan berita terkini seputar dunia Teknologi Informasi dan inovasi digital.</p>
         </header>
 
