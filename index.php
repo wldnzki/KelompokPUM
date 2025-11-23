@@ -18,12 +18,13 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
+            --primary: #dc2626;
+            --secondary: #b91c1c;
+            --accent: #f59e0b;
             --dark: #1e293b;
-            --light: #f9fafb;
-            --radius: 20px;
-            --shadow: 0 8px 24px rgba(0, 0, 0, .1);
+            --light: #fef2f2;
+            --radius: 15px;
+            --shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
         }
 
         * {
@@ -34,7 +35,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(120deg, #eef3ff, #e7f0ff);
+            background: linear-gradient(120deg, #fef2f2, #ffe4e6);
             color: var(--dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -252,7 +253,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 35px rgba(220, 38, 38, 0.2);
         }
 
         .card img {
