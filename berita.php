@@ -13,8 +13,8 @@ if (!$result) {
     <main>
         <header class="page-header">
             <h2>Berita Teknologi Informasi – Edit oleh Tiara</h2>
-            <p>Tambahan baris oleh Tiara untuk Skema 2.</p>
             <p>Artikel dan berita terkini seputar dunia Teknologi Informasi dan inovasi digital.</p>
+            <p style="text-align:center; color:#555;">Baris tambahan oleh Tiara untuk Skema 2.</p>
         </header>
 
         <section class="blog-grid">
