@@ -316,6 +316,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
     <section id="about" class="reveal">
         <div class="about-box">
             <h2>Tentang Kami</h2>
+             <h2>Edit baris kode yang belum pernah ada versi wildan</h2>
             <p>HMJ Teknik Informatika adalah organisasi kemahasiswaan yang menjadi wadah pengembangan potensi,
                 kreativitas, dan kepemimpinan mahasiswa.</p>
             <p>Kami berkomitmen menciptakan generasi teknologi yang <strong>inovatif</strong>,
