@@ -15,6 +15,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HMJ TI - Beranda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2563eb;
@@ -36,6 +37,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             background: linear-gradient(120deg, #eef3ff, #e7f0ff);
             color: var(--dark);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         html {
@@ -53,24 +55,28 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             align-items: center;
             text-align: center;
             padding: 2rem;
+            position: relative;
         }
 
         .hero h1 {
             font-size: 3rem;
             font-weight: 700;
             animation: fadeDown 1.2s ease forwards;
+            margin-bottom: 10px;
         }
 
         .hero h2 {
             font-size: 1.4rem;
-            margin-top: 10px;
+            font-weight: 400;
+            margin-bottom: 20px;
             animation: fadeUp 1.2s ease .3s forwards;
             opacity: 0;
         }
 
         .hero p {
             max-width: 650px;
-            margin-top: 20px;
+            margin: 0 auto;
+            font-size: 1.1rem;
             opacity: 0;
             animation: fadeIn 1.5s ease .6s forwards;
         }
@@ -86,12 +92,17 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             transition: .3s;
             opacity: 0;
             animation: fadeIn 1.8s ease .9s forwards;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
         }
 
         .btn-primary:hover {
             background: var(--dark);
             color: #fff;
             transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         /* SECTION GENERIC */
@@ -104,10 +115,13 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             font-size: 2.2rem;
             color: var(--primary);
             margin-bottom: 25px;
+            font-weight: 600;
         }
 
         section p {
             font-size: 1.05rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Scroll reveal base */
@@ -131,12 +145,17 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             padding: 40px 30px;
+            position: relative;
         }
 
         .about-box p {
-            max-width: 750px;
             margin: 0 auto 20px auto;
-            text-align: justify;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .about-box strong {
+            color: var(--primary);
         }
 
         /* VISI MISI */
@@ -167,6 +186,7 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             opacity: 0;
             transform: translateY(40px);
             transition: all .8s ease;
+            border-left: 4px solid var(--primary);
         }
 
         .visi-misi .block.visible {
@@ -174,21 +194,32 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             transform: translateY(0);
         }
 
-        .visi-misi .block h3 {
+        .visi-misis .block h3 {
             text-align: center;
             color: var(--primary);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .visi-misi ul {
-            list-style: disc inside;
-            padding-left: 15px;
+            list-style: none;
+            padding: 0;
         }
 
         .visi-misi li {
-            margin: 8px 0;
-            text-align: justify;
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            text-align: left;
+        }
+
+        .visi-misi li:before {
+            content: "▸";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
 
         /* GRID CARD */
@@ -197,17 +228,21 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .card {
             background: #fff;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            padding: 20px;
+            padding: 25px;
             text-align: left;
             transition: .3s;
             opacity: 0;
             transform: translateY(40px);
+            border-top: 4px solid var(--primary);
         }
 
         .card.visible {
@@ -216,33 +251,73 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
         }
 
         .card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .card img {
             width: 100%;
             height: 180px;
             object-fit: cover;
-            border-radius: var(--radius);
-            margin-bottom: 12px;
+            border-radius: 12px;
+            margin-bottom: 15px;
         }
 
         .card h4 {
             color: var(--primary);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .card a:hover {
+            color: var(--secondary);
         }
 
         /* CTA */
         .cta {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
             color: #fff;
             text-align: center;
             padding: 60px 20px;
+            border-radius: var(--radius);
+            margin: 40px 20px;
         }
 
         .cta h2 {
             font-size: 2rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            font-size: 1.1rem;
+        }
+
+        .cta .btn-primary {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        .cta .btn-primary:hover {
+            background: var(--dark);
+            color: #fff;
         }
 
         /* FOOTER */
@@ -260,7 +335,6 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
                 opacity: 0;
                 transform: translateY(-40px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -272,7 +346,6 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
                 opacity: 0;
                 transform: translateY(40px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -283,19 +356,64 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
         }
 
-        @media(max-width:768px) {
+        /* Responsive */
+        @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.4rem;
             }
 
             .hero h2 {
                 font-size: 1.1rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 50px 15px;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-box, .visi-misi {
+                padding: 30px 20px;
+                margin: 30px auto;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .visi-misi .inner {
+                gap: 20px;
+            }
+
+            .visi-misi .block {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1rem;
+            }
+
+            .btn-primary {
+                padding: 10px 20px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -304,11 +422,10 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
 <body>
 
     <!-- HERO -->
-    <div class="hero"> tiara
-        <h1>Himpunan Mahasiswa Jurusan</h1>
+    <div class="hero">
+        <h1>Website Himpunan Mahasiswa Jurusan</h1>
         <h2>Teknologi Informasi</h2>
-        <p>Selamat datang di website resmi HMJ TI. Mari berkembang bersama melalui kolaborasi, inovasi, dan pengabdian
-            di bidang teknologi informasi.</p>
+        <p>Selamat datang di website resmi HMJ TI. Mari berkembang bersama melalui kolaborasi, inovasi, dan pengabdian di bidang teknologi informasi.</p>
         <a href="#about" class="btn-primary">Kenal Lebih Dekat</a>
     </div>
 
@@ -316,13 +433,8 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
     <section id="about" class="reveal">
         <div class="about-box">
             <h2>Tentang Kami</h2>
-             <h2>Edit baris kode yang belum pernah ada versi wildan</h2>
-            <p>HMJ Teknik Informatika adalah organisasi kemahasiswaan yang menjadi wadah pengembangan potensi,
-                kreativitas, dan kepemimpinan mahasiswa.</p>
-                <p>Edit baris kode yang belum pernah ada versi tiara</p>
-            <p>Kami berkomitmen menciptakan generasi teknologi yang <strong>inovatif</strong>,
-                <strong>kolaboratif</strong>, dan <strong>profesional</strong> dalam menghadapi tantangan era digital.
-            </p>
+            <p>HMJ Teknik Informatika adalah organisasi kemahasiswaan yang menjadi wadah pengembangan potensi, kreativitas, dan kepemimpinan mahasiswa.</p>
+            <p>Kami berkomitmen menciptakan generasi teknologi yang <strong>inovatif</strong>, <strong>kolaboratif</strong>, dan <strong>profesional</strong> dalam menghadapi tantangan era digital.</p>
         </div>
     </section>
 
@@ -333,16 +445,13 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
             <div class="inner">
                 <div class="block">
                     <h3>Visi</h3>
-                    <p>Menjadi himpunan mahasiswa yang inovatif, kolaboratif, dan berintegritas dalam pengembangan
-                        teknologi informasi untuk kemajuan akademik dan masyarakat.</p>
+                    <p>Menjadi himpunan mahasiswa yang inovatif, kolaboratif, dan berintegritas dalam pengembangan teknologi informasi untuk kemajuan akademik dan masyarakat.</p>
                 </div>
                 <div class="block">
                     <h3>Misi</h3>
                     <ul>
-                        <li>Meningkatkan kompetensi mahasiswa melalui kegiatan akademik, riset, dan pengembangan
-                            teknologi.</li>
-                        <li>Mendorong kolaborasi antardivisi untuk menciptakan inovasi bermanfaat bagi kampus dan
-                            masyarakat.</li>
+                        <li>Meningkatkan kompetensi mahasiswa melalui kegiatan akademik, riset, dan pengembangan teknologi.</li>
+                        <li>Mendorong kolaborasi antardivisi untuk menciptakan inovasi bermanfaat bagi kampus dan masyarakat.</li>
                         <li>Menanamkan nilai kepemimpinan, profesionalitas, dan integritas pada setiap anggota.</li>
                         <li>Memperluas jejaring dengan institusi dan komunitas teknologi lokal maupun nasional.</li>
                     </ul>
@@ -351,15 +460,14 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
         </div>
     </section>
 
-
     <!-- BLOG -->
     <section id="blog">
         <h2>Kegiatan Terbaru</h2>
+        <p>Ikuti perkembangan terbaru kegiatan dan program kerja HMJ TI</p>
         <div class="grid">
             <?php foreach ($blog as $b): ?>
                 <div class="card reveal">
-                    <img src="../admin/img/blog/<?= htmlspecialchars($b['gambar']); ?>"
-                        alt="<?= htmlspecialchars($b['judul']); ?>">
+                    <img src="../admin/img/blog/<?= htmlspecialchars($b['gambar']); ?>" alt="<?= htmlspecialchars($b['judul']); ?>">
                     <h4><?= htmlspecialchars($b['judul']); ?></h4>
                     <p><?= htmlspecialchars(substr($b['konten'], 0, 100)); ?>...</p>
                     <a href="blog.php">Selengkapnya →</a>
@@ -368,14 +476,12 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
         </div>
     </section>
 
-    <!-- ===== AJAKAN DAFTAR ===== -->
+    <!-- CTA -->
     <div class="cta reveal">
         <h2>Daftar Calon Anggota Baru</h2>
-        <p>Kami menantikan partisipasi Anda dalam berbagai kegiatan, pelatihan, dan inovasi di HMJ TI.
-            Klik tombol di bawah ini untuk mengisi formulir pendaftaran.</p>
+        <p>Kami menantikan partisipasi Anda dalam berbagai kegiatan, pelatihan, dan inovasi di HMJ TI. Klik tombol di bawah ini untuk mengisi formulir pendaftaran.</p>
         <a href="daftar.php" class="btn-primary">Isi Formulir Pendaftaran</a>
     </div>
-    <!-- ===== AJAKAN DAFTAR ===== -->
 
     <?php include 'footer.php'; ?>
 
@@ -388,9 +494,13 @@ $blog = mysqli_fetch_all($qBlog, MYSQLI_ASSOC);
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.2 });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
 
         document.querySelectorAll('.reveal, .block, .card').forEach(el => observer.observe(el));
     </script>
 </body>
 
+</html>
